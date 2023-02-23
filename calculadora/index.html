@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho__esquerda">
+            <img src="https://cdn-icons-png.flaticon.com/512/3884/3884483.png" alt=""> <!--Imagem temporaria-->
+            <p>Calculadora</p>
+        </div>
+        <div class="options-window">
+            <p>-</p>
+            <p>□</p>
+            <p id="close">x</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="corpo__esquerda">
+            <div class="padrao">
+                <img src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-plain/422/06_menu_stack-512.png"
+                    alt="" id="menu-bar">
+                <p>Padrao</p>
+                <img src="https://webstockreview.net/images/outside-clipart-window-open-16.png" alt="" id="outra-guia">
+            </div>
+            <div class="calc"> <!-- Div principal-->
+                <div class="scroll"> <!-- Quando o numero for muito grande dar uma diminuida na fonte-->
+                    <div id="display" class="display">0</div> <!-- Onde aparece os numeros-->
+                </div>
+                <div class="botoes-memoria">
+                    <button>MC</button>
+                    <button>MR</button>
+                    <button>M+</button>
+                    <button>M-</button>
+                    <button>MS</button>
+                </div>
+                <div class="botoes">
+                    <button id="porc">%</button>
+                    <button id="limparCalculo">CE</button>
+                    <button id="limparTudo">C</button>
+                    <button id="apagar">«</button>
+                    <button id="divisaoUm">1/x</button>
+                    <button id="potencia">x²</button>
+                    <button id="raiz">2√x</button>
+                    <button id="sinaldividir">÷</button>
+                    <button id="num7" class="num">7</button>
+                    <button id="num8" class="num">8</button>
+                    <button id="num9" class="num">9</button>
+                    <button id="sinalmultiplica">x</button>
+                    <button id="num4" class="num">4</button>
+                    <button id="num5" class="num">5</button>
+                    <button id="num6" class="num">6</button>
+                    <button id="sinalsubtrair">-</button>
+                    <button id="num1" class="num">1</button>
+                    <button id="num2" class="num">2</button>
+                    <button id="num3" class="num">3</button>
+                    <button id="sinalsomar">+</button>
+                    <button id="maismenos">±</button>
+                    <button id="num0"class="num">0</button>
+                    <button id="virg">,</button>
+                    <button id="igual">=</button>
+                </div>
+            </div>
+        </div>
+        <div class="corpo__direita">
+            <p>Histórico</p>
+            <p>Memória</p>
+            <div class="lixeira">
+                <img src="https://cdn-icons-png.flaticon.com/512/54/54324.png" alt="" width="20px">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
