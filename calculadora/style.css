@@ -1,0 +1,245 @@
+/* Geral */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #F3F3F3;
+}
+
+button {
+    border: 1px solid lightblue;
+    margin: 0.1rem 0.2rem;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: lightblue;
+    color: black;
+    cursor: pointer;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div {
+    display: flex;
+}
+
+header img {
+    height: 30px;
+    width: 35px;
+}
+
+.options-window p {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.options-window p:hover {
+    background-color: #d9d9d9;
+}
+
+#close:hover {
+    background-color: #ff1a1a;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    width: 100%;
+}
+
+.corpo__esquerda {
+    width: 50%;
+}
+
+.corpo__direita {
+    width: 50%;
+    display: flex;
+    gap: 3rem;
+    padding-left: 2rem;
+}
+
+.padrao {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#outra-guia {
+    height: 15px;
+    width: 15px;
+}
+
+#menu-bar {
+    height: 25px;
+    width: 25px;
+}
+
+.scroll {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 25px;
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.botoes-memoria {
+    display: flex;
+}
+
+.botoes-memoria button {
+    border: none;
+    padding: 1rem 2rem;
+    background-color: #F3F3F3;
+}
+
+.botoes-memoria button:hover {
+    background-color: lightblue;
+    color: black;
+    cursor: pointer;
+}
+
+/* Definindo a grid area */
+.botoes {
+    display: grid;
+    width: 100%;
+    height: 20rem;
+    grid-template-areas: 
+    "porcentagem CE       C       backspace"
+    "divisaoX    quadrada raiz    divisao"
+    "num7        num8     num9    vezes"
+    "num4        num5     num6    menos"
+    "num1        num2     num3    mais"
+    "maisMenos   zero0    virgula igual";
+}
+
+.botoes #porc {
+    grid-area: porcentagem;
+    
+}
+
+.botoes #limparCalculo {
+    grid-area: CE;
+    
+}
+
+.botoes #limparTudo {
+    grid-area: C;
+    
+}
+
+.botoes #apagar {
+    grid-area: backspace;
+    
+}
+
+.botoes #divisaoUm {
+    grid-area: divisaoX;
+    
+}
+
+.botoes #potencia {
+    grid-area: quadrada;
+    
+}
+
+.botoes #raiz {
+    grid-area: raiz;
+    
+}
+
+.botoes #sinaldividir {
+    grid-area: divisao;
+    
+}
+
+.botoes #num7 {
+    grid-area: num7;
+}
+
+.botoes #num8 {
+    grid-area: num8;
+}
+
+.botoes #num9 {
+    grid-area: num9;
+}
+
+.botoes #sinalmultiplica {
+    grid-area: vezes;
+}
+
+.botoes #num4 {
+    grid-area: num4;
+}
+
+.botoes  #num5 {
+    grid-area: num5;
+}
+
+.botoes #num6 {
+    grid-area: num6;
+}
+
+.botoes #sinalsubtrair {
+    grid-area: menos;
+    
+}
+
+.botoes #num1 {
+    grid-area: num1;
+}
+
+.botoes #num2 {
+    grid-area: num2;
+}
+
+.botoes #num3 {
+    grid-area: num3;
+}
+
+.botoes #sinalsomar {
+    grid-area: mais;
+    
+}
+
+.botoes #maismenos {
+    grid-area: maisMenos;
+    
+}
+
+.botoes #num0 {
+    grid-area: zero0;
+}
+
+.botoes #virgula {
+    grid-area: virgula;
+    
+}
+
+.botoes #igual {
+    grid-area: igual;
+    background-color: #75a9ee;
+    color: white;
+}
+
+#igual:hover{
+    background-color: #005A9E;
+}
+
+.num{
+    background-color: white;
+}
+
+.lixeira {
+    display: flex;
+    align-items: end;
+    margin-left: 60%;
+    
+}
