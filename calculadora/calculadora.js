@@ -175,8 +175,9 @@ function dividir(primeiroNumero, segundoNumero) {
         display.textContent = resultado.toString(10).replace(".", ",");
         return;
     }
-    operacoes[operacoes.length] = "Entrada inválida";
-    display.textContent = "Entrada inválida";
+    operacoes[operacoes.length] = "Não é possível dividir por 0";
+    display.textContent = "Não é possível dividir por 0";
+    complemento.textContent = "" + primeiroNumero + " / " + segundoNumero;
     operacoes = []
     operacoes[0] = 0
     prosseguir = false
@@ -231,11 +232,11 @@ function apagarCE(){
 }
 
 function apagarC() {
+    prosseguir = true;
     apagarCE();
     complemento.textContent = "";
     operacoes = [];
     operacoes[0] = "0";
-    prosseguir = true;
 }
 
 function apagarUm(){
@@ -252,13 +253,17 @@ function apagarUm(){
 }
 
 function maisMenos(){
-    let invertido = (Number(display.textContent.replace(",", ".")) * -1) + "";
-    display.textContent = invertido.replace(".", ",");
+    if (prosseguir) {
+        let invertido = (Number(display.textContent.replace(",", ".")) * -1) + "";
+        display.textContent = invertido.replace(".", ",");
+    }
 }
 
 function virgula() {
-    if (!display.textContent.includes(",")) {
-        display.textContent += ",";
+    if (prosseguir) {
+        if (!display.textContent.includes(",")) {
+            display.textContent += ",";
+        }
     }
 }
 
