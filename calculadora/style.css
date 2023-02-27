@@ -1,16 +1,20 @@
 /* Geral */
 * {
     font-family: Arial, Helvetica, sans-serif;
+    color: white;   
 }
 
 body {
-    background-color: #F3F3F3;
+    background-color: #202020;
 }
 
 button {
-    border: 1px solid lightblue;
+    border: 1px solid #313131;
+    background-color: #313131;
     margin: 0.1rem 0.2rem;
-    transition-duration: 0.4s;
+    /* transition-duration: 0.4s; */
+    padding: 1.5rem;
+    border-radius: 5%;
 }
 
 button:hover{
@@ -18,6 +22,34 @@ button:hover{
     color: black;
     cursor: pointer;
 }
+
+.hisMem{
+    border: 1px solid #202020;
+    background-color: #202020;
+    margin: 0.1rem 0.2rem;
+    padding: 1rem;
+    height: 2rem;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.activid{
+    position: relative;
+}
+
+.activid::before{
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: #005a9e;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
 
 /* HEADER */
 header {
@@ -28,11 +60,16 @@ header {
 
 header div {
     display: flex;
+    align-items: center;
+
+}
+.cabecalho__esquerda{
+    gap: 0.5rem;
 }
 
 header img {
-    height: 30px;
-    width: 35px;
+    height: 20px;
+    width: 20px;
 }
 
 .options-window p {
@@ -71,14 +108,29 @@ main {
     gap: 15px;
 }
 
-#outra-guia {
-    height: 15px;
-    width: 15px;
+.padraoTitulo{
+    font-size: 1.3rem;
 }
 
-#menu-bar {
-    height: 25px;
-    width: 25px;
+#outra-guia{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.outra-guia:hover{
+    background-color: lightblue;
+    border-radius: 0.1rem;
+    padding: 0.1rem;
+}
+
+#menu-bar{
+    height: 17px;
+    width: 17px;
+}
+.menu-bar:hover{
+    background-color: #313131;
+    border-radius: 0.1rem;
+    padding: 0.1rem;
 }
 
 .scroll {
@@ -89,14 +141,22 @@ main {
     margin-right: 1rem;
 }
 
+#complemento {
+    font-size: 15px;
+    color: #878787;
+    margin-bottom: 0.3rem;
+}
+
+
 .botoes-memoria {
     display: flex;
+    
 }
 
 .botoes-memoria button {
     border: none;
     padding: 1rem 2rem;
-    background-color: #F3F3F3;
+    background-color: #202020;
 }
 
 .botoes-memoria button:hover {
@@ -225,16 +285,18 @@ main {
 
 .botoes #igual {
     grid-area: igual;
-    background-color: #75a9ee;
+    background-color: #005A9E;
+    
     color: white;
 }
 
 #igual:hover{
-    background-color: #005A9E;
+    background-color: #75a9ee;
 }
 
 .num{
-    background-color: white;
+    border: 1px solid #3b3b3b;
+    background-color: #3b3b3b;
 }
 
 .lixeira {

@@ -12,7 +12,7 @@
 <body>
     <header class="cabecalho">
         <div class="cabecalho__esquerda">
-            <img src="https://cdn-icons-png.flaticon.com/512/3884/3884483.png" alt=""> <!--Imagem temporaria-->
+            <img src="https://winaero.com/blog/wp-content/uploads/2019/10/Windows-10-Calculator-Fluent-Icon-Big-256.png" alt="" > <!--Imagem temporaria-->
             <p>Calculadora</p>
         </div>
         <div class="options-window">
@@ -25,14 +25,18 @@
     <main>
         <div class="corpo__esquerda">
             <div class="padrao">
-                <img src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-plain/422/06_menu_stack-512.png"
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlwgJMZDxQV8pCwKwcfrds_ifIehpOcBGpEWFowIG_G-l2JTnHbENkBEa3Nfa3xv_YSE60Wh8ciYZ4O6Jh86UrTxxyWOQ5gdmFOv0ky4CkVR_ofFQqQbuUn45512wHAvVCoNA9lRuVM2OpaPYHXGGs58kjTxttUmZtDXlrQbo2I93kzRXWsUv_9yle/s1600/hamburger3pontos.png"
                     alt="" id="menu-bar">
-                <p>Padrao</p>
-                <img src="https://webstockreview.net/images/outside-clipart-window-open-16.png" alt="" id="outra-guia">
+                <p class="padraoTitulo">Padrão</p>
+                <a class="imagem">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3l8id4T-bgYICSEkzOPqyxZDwFLy7_Owk1Am95o1xvshCfCaPT7c8CS8KMalMQkOdstTWBls5h6a1Awb_pYkl560Pc0yEiY7zs6pEqgA8h7CIMh7bIrgSgSVpvR2_PYvCkgVbDgKTQgzRQtd4VMTZEkiWizzvRnqDepsROTV_3-rh8C34QG9EWHn9/w640-h528/padrao.png" alt="" 
+                    id="outra-guia" class="outra-guia">
+                </a>
             </div>
             <div class="calc"> <!-- Div principal-->
                 <div class="scroll"> <!-- Quando o numero for muito grande dar uma diminuida na fonte-->
-                    <div id="display" class="display">0</div> <!-- Onde aparece os numeros-->
+					<div id="complemento"></div>
+                    <div id="display" class="display"></div> <!-- Onde aparece os numeros-->
                 </div>
                 <div class="botoes-memoria">
                     <button>MC</button>
@@ -42,38 +46,38 @@
                     <button>MS</button>
                 </div>
                 <div class="botoes">
-                    <button id="porc">%</button>
-                    <button id="limparCalculo">CE</button>
-                    <button id="limparTudo">C</button>
-                    <button id="apagar">«</button>
-                    <button id="divisaoUm">1/x</button>
-                    <button id="potencia">x²</button>
-                    <button id="raiz">2√x</button>
-                    <button id="sinaldividir">÷</button>
-                    <button id="num7" class="num">7</button>
-                    <button id="num8" class="num">8</button>
-                    <button id="num9" class="num">9</button>
-                    <button id="sinalmultiplica">x</button>
-                    <button id="num4" class="num">4</button>
-                    <button id="num5" class="num">5</button>
-                    <button id="num6" class="num">6</button>
-                    <button id="sinalsubtrair">-</button>
-                    <button id="num1" class="num">1</button>
-                    <button id="num2" class="num">2</button>
-                    <button id="num3" class="num">3</button>
-                    <button id="sinalsomar">+</button>
-                    <button id="maismenos">±</button>
-                    <button id="num0"class="num">0</button>
-                    <button id="virg">,</button>
-                    <button id="igual">=</button>
+                    <button id="porc" onclick="numerosComplexos('porc')">%</button>
+                    <button id="limparCalculo" onclick="apagarCE()">CE</button>
+                    <button id="limparTudo" onclick="apagarC()">C</button>
+                    <button id="apagar" onclick="apagarUm()"><img src="https://www.iconsdb.com/icons/preview/white/delete-3-xxl.png" height="15"></button>
+                    <button id="divisaoUm" onclick="numerosComplexos('divisaoUm')">1/x</button>
+                    <button id="potencia" onclick="numerosComplexos('potencia')">x²</button>
+                    <button id="raiz" onclick="numerosComplexos('raiz')" value="">2√x</button>
+                    <button id="sinaldividir" onclick="lerSinal('sinaldividir')" value="/">÷</button>
+                    <button id="num7" class="num" onclick="lerNumero('num7')" value="7">7</button>
+                    <button id="num8" class="num" onclick="lerNumero('num8')" value="8">8</button>
+                    <button id="num9" class="num" onclick="lerNumero('num9')" value="9">9</button>
+                    <button id="sinalmultiplica" onclick="lerSinal('sinalmultiplica')" value="*">x</button>
+                    <button id="num4" class="num" onclick="lerNumero('num4')" value="4">4</button>
+                    <button id="num5" class="num" onclick="lerNumero('num5')" value="5">5</button>
+                    <button id="num6" class="num" onclick="lerNumero('num6')" value="6">6</button>
+                    <button id="sinalsubtrair" onclick="lerSinal('sinalsubtrair')" value="-">-</button>
+                    <button id="num1" class="num" onclick="lerNumero('num1')" value="1">1</button>
+                    <button id="num2" class="num" onclick="lerNumero('num2')" value="2">2</button>
+                    <button id="num3" class="num" onclick="lerNumero('num3')" value="3">3</button>
+                    <button id="sinalsomar" onclick="lerSinal('sinalsomar')" value="+">+</button>
+                    <button id="maismenos" onclick="maisMenos()">±</button>
+                    <button id="num0"class="num" onclick="lerNumero('num0')" value="0">0</button>
+                    <button id="virg" onclick="virgula()">,</button>
+                    <button id="igual" onclick="showDisplay()">=</button>
                 </div>
             </div>
         </div>
         <div class="corpo__direita">
-            <p>Histórico</p>
-            <p>Memória</p>
+            <button class="hisMem activid" onclick="ativarMenu(this)">Histórico</button>
+            <button class="hisMem activid" onclick="ativarMenu(this)">Memória</button>
             <div class="lixeira">
-                <img src="https://cdn-icons-png.flaticon.com/512/54/54324.png" alt="" width="20px">
+                <img src="https://www.iconsdb.com/icons/preview/white/delete-xxl.png" alt="" width="20px">
             </div>
         </div>
     </main>
@@ -81,6 +85,9 @@
     <footer>
 
     </footer>
+    <script src="calculadora.js">
+        
+    </script>
 
 </body>
 
